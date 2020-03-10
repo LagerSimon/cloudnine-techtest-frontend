@@ -5,5 +5,10 @@
  */
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: `Cloud Nine - Techtest frontend`,
+    description: `Technical test fort frontend application to Cloud Nine`,
+    author: `contact@simonlager.com`,
+  },
+  plugins: [`gatsby-plugin-styled-components`],
 }

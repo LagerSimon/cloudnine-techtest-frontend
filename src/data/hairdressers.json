@@ -1,0 +1,90 @@
+[
+  {
+    "title": "Hårizont",
+    "slug": "/harizont/",
+    "time": "12.00",
+    "duration": "30 min",
+    "price": 320,
+    "currency": "kr",
+    "address": "Västmannagatan 69",
+    "rating": 4,
+    "reviews": 18
+  },
+  {
+    "title": "Hårizont",
+    "slug": "/harizont1/",
+    "time": "12.00",
+    "duration": "30 min",
+    "price": 320,
+    "currency": "kr",
+    "address": "Västmannagatan 69",
+    "rating": 2,
+    "reviews": 54
+  },
+  {
+    "title": "Hårizont",
+    "slug": "/harizont2/",
+    "time": "12.00",
+    "duration": "30 min",
+    "price": 360,
+    "currency": "kr",
+    "address": "Västmannagatan 69",
+    "rating": 3,
+    "reviews": 18
+  },
+  {
+    "title": "Hårizont",
+    "slug": "/harizont3/",
+    "time": "12.00",
+    "duration": "30 min",
+    "price": 320,
+    "currency": "kr",
+    "address": "Västmannagatan 69",
+    "rating": 5,
+    "reviews": 12
+  },
+  {
+    "title": "Hårizont",
+    "slug": "/harizont/",
+    "time": "12.00",
+    "duration": "30 min",
+    "price": 320,
+    "currency": "kr",
+    "address": "Västmannagatan 69",
+    "rating": 4,
+    "reviews": 18
+  },
+  {
+    "title": "Hårizont",
+    "slug": "/harizont1/",
+    "time": "12.00",
+    "duration": "30 min",
+    "price": 320,
+    "currency": "kr",
+    "address": "Västmannagatan 69",
+    "rating": 2,
+    "reviews": 54
+  },
+  {
+    "title": "Hårizont",
+    "slug": "/harizont2/",
+    "time": "12.00",
+    "duration": "30 min",
+    "price": 360,
+    "currency": "kr",
+    "address": "Västmannagatan 69",
+    "rating": 3,
+    "reviews": 18
+  },
+  {
+    "title": "Hårizont",
+    "slug": "/harizont3/",
+    "time": "12.00",
+    "duration": "30 min",
+    "price": 320,
+    "currency": "kr",
+    "address": "Västmannagatan 69",
+    "rating": 5,
+    "reviews": 12
+  }
+]
