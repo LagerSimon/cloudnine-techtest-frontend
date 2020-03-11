@@ -21,6 +21,7 @@ const Button = styled.button`
   border: 0.1rem solid;
   font-size: 1.5rem;
   text-transform: uppercase;
+  outline: none;
 `
 
 const Github = styled(Button)`
