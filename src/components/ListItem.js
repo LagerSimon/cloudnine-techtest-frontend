@@ -1,13 +1,13 @@
 import React from "react"
 import styled from "styled-components"
-
+import { colors } from "../constants"
 import Rating from "../components/Rating"
-import ArrowIcon from "../icons/arrow.svg"
+import Icon from "../components/Icon"
 
 const ListItem = styled.li`
   display: flex;
   padding: 2rem 0;
-  border-bottom: 0.1rem solid #eee;
+  border-bottom: 0.1rem solid ${colors.borderColor};
 `
 
 const Time = styled.p`
@@ -38,14 +38,14 @@ const AdditionalInfo = styled.div`
 `
 
 const Duration = styled.p`
-  color: #656565;
+  color: ${colors.lightGrey};
   font-size: 1.1rem;
   padding: 0.5rem 1.5rem;
 `
 
 const Address = styled.p`
   margin-top: 1rem;
-  color: #666666;
+  color: ${colors.darkGrey};
 `
 
 const Arrow = styled.div`
@@ -57,7 +57,7 @@ const Arrow = styled.div`
 export default ({
   hairdresser: {
     time,
-    title,
+    name,
     price,
     currency,
     rating,
@@ -70,7 +70,7 @@ export default ({
     <Time>{time}</Time>
     <Details>
       <Header>
-        <Name>{title}</Name>
+        <Name>{name}</Name>
         <Price>
           {price} {currency}
         </Price>
@@ -82,7 +82,7 @@ export default ({
       <Address>{address}</Address>
     </Details>
     <Arrow>
-      <img alt="" src={ArrowIcon} />
+      <Icon type="arrow" />
     </Arrow>
   </ListItem>
 )

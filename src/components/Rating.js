@@ -1,29 +1,30 @@
 import React from "react"
 import styled from "styled-components"
-
-import StarIcon from "../icons/star.svg"
-import StarIconFilled from "../icons/star-filled.svg"
+import { colors } from "../constants"
+import Icon from "../components/Icon"
 
 const Rating = styled.div`
   display: flex;
 `
 
-const Icon = styled.img`
-  width: 1rem;
-  margin-right: 0.3rem;
+const Star = styled(Icon)`
+  width: ${p => (p.size === "small" ? "1rem" : "1.3rem")};
+  margin-right: 0.4rem;
 `
 
 const ReviewsCount = styled.span`
-  color: #656565;
-  font-size: 1.1rem;
+  color: ${p => (p.theme === "dark" ? colors.lightGrey : colors.white)};
+  font-size: ${p => (p.size === "small" ? "1.1rem" : "1.3rem")};
   margin-left: 0.5rem;
 `
 
-export default ({ rating, reviews }) => (
+export default ({ theme, size, rating, reviews }) => (
   <Rating>
     {[...Array(5)].map((e, i) => (
-      <Icon key={i} src={i < rating ? StarIconFilled : StarIcon} />
+      <Star size={size} key={i} type={i < rating ? "star-filled" : "star"} />
     ))}
-    <ReviewsCount>({reviews})</ReviewsCount>
+    <ReviewsCount theme={theme} size={size}>
+      ({reviews})
+    </ReviewsCount>
   </Rating>
 )

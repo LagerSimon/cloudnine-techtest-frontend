@@ -10,5 +10,18 @@ module.exports = {
     description: `Technical test fort frontend application to Cloud Nine`,
     author: `contact@simonlager.com`,
   },
-  plugins: [`gatsby-plugin-styled-components`],
+  plugins: [
+    `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Roboto`,
+            variants: [`300`, `400`, `700`],
+          },
+        ],
+      },
+    },
+  ],
 }
