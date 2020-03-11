@@ -5,8 +5,6 @@ import { colors } from "../constants"
 import ListItem from "../components/ListItem"
 import Icon from "../components/Icon"
 
-const Container = styled.div``
-
 const Header = styled.div`
   display: flex;
   justify-content: space-between;
@@ -29,9 +27,12 @@ const Filter = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 0.1rem solid ${colors.gold};
+  border-bottom: 0.1rem solid ${p => (p.open ? colors.gold : "transparent")};
   position: relative;
   padding: 0 1.5rem;
+  overflow: hidden;
+  transition: all 0.2s;
+  max-height: ${p => (p.open ? "5rem" : "0")};
 `
 
 const Select = styled.select`
@@ -56,6 +57,7 @@ const EmptyResult = styled.p`
 
 export default ({ pageContext: { hairdressers } }) => {
   const [listItems, setListItems] = useState(hairdressers)
+  const [filterOpen, setFilterOpen] = useState(false)
   const [range, setRange] = useState(["0", "1250"])
 
   useEffect(() => {
@@ -73,13 +75,18 @@ export default ({ pageContext: { hairdressers } }) => {
   }, [hairdressers, range])
 
   return (
-    <Container>
+    <>
       <Header>
-        <BackArrow type="arrow" />
+        <Link to="/">
+          <BackArrow type="arrow" />
+        </Link>
         <h1>Hår</h1>
-        <FilterButton type="filter" />
+        <FilterButton
+          onClick={() => setFilterOpen(!filterOpen)}
+          type="filter"
+        />
       </Header>
-      <Filter>
+      <Filter open={filterOpen}>
         Pris:
         <Select
           value={range.join()}
@@ -95,7 +102,7 @@ export default ({ pageContext: { hairdressers } }) => {
         <SelectArrow type="arrow" />
       </Filter>
       <List>
-        {listItems.length ? (
+        {listItems && listItems.length ? (
           listItems.map(item => (
             <Link key={item.slug} to={item.slug}>
               <ListItem hairdresser={item} />
@@ -105,6 +112,6 @@ export default ({ pageContext: { hairdressers } }) => {
           <EmptyResult>Inga salonger hittades</EmptyResult>
         )}
       </List>
-    </Container>
+    </>
   )
 }

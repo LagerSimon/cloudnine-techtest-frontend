@@ -2,11 +2,9 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import { colors } from "../constants"
-
 import Rating from "../components/Rating"
 import Icon from "../components/Icon"
-
-import HeroImage from "../images/image@2x.jpg"
+import HeroImage from "../images/hero-image.jpg"
 
 const Hero = styled.div`
   position: relative;
